@@ -28,5 +28,6 @@ Visual Studio Code
 
 ## API
 
-![image](https://user-images.githubusercontent.com/41653026/175948933-604fe4c8-f838-49ef-9f04-795fc37b5aa7.png)
+![Screenshot_1](https://user-images.githubusercontent.com/41653026/175949439-43ddc7eb-c283-4e25-9b47-d59722e53c99.png)
+
 
