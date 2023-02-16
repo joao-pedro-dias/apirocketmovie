@@ -19,7 +19,7 @@
     "knex": "^2.1.0",
     "multer": "^1.4.5-lts.1",
     "sqlite": "^4.1.1",
-    "sqlite3": "^5.0.8"
+    "sqlite3": "^5.1.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.18"
