@@ -28,14 +28,16 @@ class NotesController{
     }
 
     async show(request, response){
-        const { id } = request.params;
-        const note = await knex("movie_notes").where( { id } ).first();
-        const user = await knex("users").where({ id }).first();
-        const tags = await knex("movie_tags").where({ note_id: id }).orderBy("name");
 
+        const { id } = request.params;
+        const note = await knex("movie_notes").where({ id }).first();
+        const user_id = note.user_id;
+        const user = await knex("users").where({ id: user_id }).first();
+        const tags = await knex("movie_tags").where({ note_id: id }).orderBy("name");
+        
         return response.json({
             ...note,
-            user_name: id,
+            user_name: user.name, // adiciona o nome do usuário aqui
             tags
         });
     }
