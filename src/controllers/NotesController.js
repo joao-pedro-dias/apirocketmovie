@@ -14,10 +14,6 @@ class NotesController{
             user_id
         });
 
-        console.log("A nota é igual a " + rating)
-        console.log("Rating " + typeof(rating))
-        console.log("RatingInt " + typeof(ratingInt))
-
         const tagsInsert = tags.map(name => {
             return{
                 note_id,
@@ -33,12 +29,13 @@ class NotesController{
 
     async show(request, response){
         const { id } = request.params;
-
-        const note = await knex("movie_notes").where({ id }).first();
+        const note = await knex("movie_notes").where( { id } ).first();
+        const user = await knex("users").where({ id }).first();
         const tags = await knex("movie_tags").where({ note_id: id }).orderBy("name");
-        
+
         return response.json({
             ...note,
+            user_name: id,
             tags
         });
     }
