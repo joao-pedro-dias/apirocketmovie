@@ -3,7 +3,7 @@ const knex = require("../database/knex");
 class NotesController{
     async create(request, response){
         const { title, description, tags, rating } = request.body;
-        const user_id = request.user.id;
+        const {user_id} = request.user.id;
 
         const ratingInt = parseInt(rating); 
 
