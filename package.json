@@ -1,5 +1,5 @@
 {
-  "name": "foodExplorer",
+  "name": "apirocketmovie",
   "version": "1.0.0",
   "description": "API desenvolvida no programa Explorer da Rocketseat",
   "main": "index.js",
@@ -21,8 +21,7 @@
     "multer": "^1.4.5-lts.1",
     "pm2": "^5.3.0",
     "sqlite": "^4.1.1",
-    "sqlite3": "^5.1.4",
-    "sweetalert2": "^11.7.3"
+    "sqlite3": "^5.1.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.18"

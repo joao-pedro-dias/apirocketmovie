@@ -77,7 +77,7 @@ class UsersController{
         .where( { id: user_id })
         .update(updateObject)
 
-        return response.json(`Senha alterada com sucesso!`);
+        return response.json("deu bom");
     }
 }
 
